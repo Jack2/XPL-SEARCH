@@ -56,6 +56,9 @@ Github            https://github.com/coderpirata/
 0.5 - [30/08/2015]
 - Added search by Author
 
+0.5.1 - [02/09/2015]
+- Modified 'syntax error' Issue
+- PHP Parse error:  syntax error, unexpected '[' on line 69
 
 If you find any bug or want to make any suggestions, please contact me by email.
 */
@@ -66,9 +69,10 @@ ini_restore("allow_url_fopen");
 ini_set('allow_url_fopen',TRUE);
 ini_set('display_errors', FALSE);
 ini_set('max_execution_time', FALSE);
-$oo = getopt('h::s:p:a::d:', ['author:', 'set-db:', 'save::', 'update::', 'help::', 'search:', 
-                            'proxy:', 'proxy-login', 'about::', 'respond-time:', 
-							'banner-no::', 'save-dir:', 'search-list:', 'save-log']);
+$oo0=  array('author:', 'set-db:', 'save::', 'update::', 'help::', 'search:', 
+        'proxy:', 'proxy-login', 'about::', 'respond-time:', 
+	'banner-no::', 'save-dir:', 'search-list:', 'save-log');
+$oo = getopt('h::s:p:a::d:',$oo0);
 
 ####################################################################################################
 ## GENERAL FUNCTIONS
